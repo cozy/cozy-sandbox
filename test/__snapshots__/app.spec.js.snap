@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component only should be mounted correctly 1`] = `
+<HashRouter>
+  <div
+    className="app-wrapper o-layout--2panes"
+  >
+    <Wrapper />
+    <main
+      className="app-content"
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          path="/accounts"
+        />
+        <Route
+          component={[Function]}
+          path="/apps"
+        />
+        <Redirect
+          from="/"
+          push={false}
+          to="/accounts"
+        />
+        <Redirect
+          from="*"
+          push={false}
+          to="/accounts"
+        />
+      </Switch>
+    </main>
+  </div>
+</HashRouter>
+`;

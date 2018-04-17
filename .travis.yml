@@ -1,0 +1,40 @@
+language: node_js
+matrix:
+  fast_finish: true
+node_js:
+- '8'
+branches:
+  except:
+  - build
+env:
+  global:
+  - CXX=g++-4.8
+  # GITHUB_TOKEN for yarn deploy script
+  # to generate yours : travis encrypt GITHUB_TOKEN=<your_GITHUB_TOKEN> -r cozy/cozy-interapp-sandbox --org
+  # REGISTRY_TOKEN for yarn cozyPublish script
+  # to generate yours : travis encrypt REGISTRY_TOKEN=<your_REGISTRY_TOKEN> -r cozy/cozy-interapp-sandbox --org
+  # N.B.: the --org option is needed only for public repositories
+  - secure: FeRG/wfbiA+tj5BnxFvAnoVeU2EL93UNR1CqbYboMPv7RsbPvxarbkt9whkf1dVCAj1xIWzHrQnPOl0yIvt2FKFu/rJcuf0jc4Ab7SuBFsKJ5U7620FOuL5IZh/tklP8nlM0BI8xCHOj6ZsUei4qKe3gsO2dcjazYXzG8eKY6x02KY2rv6u0BfWtgU16BouazcQwVzTehcyxWUMwM6rzagwiYA8bDu4Qp+L8NiFay+IjRQVIIPJ05wLG2hY8+cBnObcAFWNaTtA7BFJn77uW9NmHM32/b56obikgrKxyJkZwIrj1QM08+idTPTxwnh3KIzpAudBvyoCks5WrKpJfjMmMEWjwKipdzcFE9HT9/gG8+JSHecUkmtAcMt5h2MSwgJfmdU12i211/xUbBWv496m9cYGtW7lMHG0lOGOGwHmiRNtOuW2kwqR4l1UOC2GNOWbBzvf32+SEIvIJ/kZXSsmQC/nN5YUjh2MYWzZc2onqjG6J1Xy28lkGOF6Qkio78NxfjHXgcSqn8ZbkHxZaqzPJFPTQi2oeR1ZbPkxEanRuQMsqB/0qpY6F593ibYAobx6cYj37RwaQ9qN5DGQDoYRLVydMQUislM94JEba4C2CLLpz2CjqmfV44nD+PB7nc2asKyd9CFq66hezOThlIg/xY/P8j3QqIktZSACr6nU=
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - deadsnakes
+    packages:
+    - g++-4.8
+    - python3.5
+cache:
+  yarn: true
+  directories:
+  - node_modules
+script:
+- yarn test
+- yarn build:browser
+deploy:
+  - provider: script
+    repo: cozy/cozy-interapp-sandbox
+    skip-cleanup: true
+    # deploy the build on a build branch and publish to the Cozy registry
+    script: DEPLOY_BRANCH=build && yarn deploy
+    on:
+      branch: master
