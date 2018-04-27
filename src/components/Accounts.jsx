@@ -12,7 +12,7 @@ const Accounts = () => (
       onComplete={res => alert('intent has completed ! ' + JSON.stringify(res))}
       onDismiss={() => alert('intent has been dismissed !')}
       options={{
-        slug: 'bouyguesbox-collect'
+        slug: 'trainline'
       }}
     >
       <Button>Create account for Bouygues Box</Button>

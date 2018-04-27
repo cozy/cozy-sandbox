@@ -13,7 +13,7 @@ exports[`Apps should be rendered correctly 1`] = `
     onDismiss={[Function]}
     options={
       Object {
-        "slug": "bouyguesbox-collect",
+        "slug": "trainline",
       }
     }
     tag="span"
