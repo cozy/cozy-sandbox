@@ -28,7 +28,7 @@ exports[`Accounts should be rendered correctly 1`] = `
       theme=""
       type="submit"
     >
-      Create account for Bouygues Box
+      Create account for Trainline
     </Button>
   </IntentOpener>
 </div>

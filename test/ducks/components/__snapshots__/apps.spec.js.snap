@@ -28,7 +28,7 @@ exports[`Apps should be rendered correctly 1`] = `
       theme=""
       type="submit"
     >
-      Install app Bouygues Box
+      Install app Trainline
     </Button>
   </IntentOpener>
 </div>

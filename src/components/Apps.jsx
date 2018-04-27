@@ -15,7 +15,7 @@ const Apps = () => (
         slug: 'trainline'
       }}
     >
-      <Button>Install app Bouygues Box</Button>
+      <Button>Install app Trainline</Button>
     </IntentOpener>
   </div>
 )

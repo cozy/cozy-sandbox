@@ -15,7 +15,7 @@ const Accounts = () => (
         slug: 'trainline'
       }}
     >
-      <Button>Create account for Bouygues Box</Button>
+      <Button>Create account for Trainline</Button>
     </IntentOpener>
   </div>
 )
