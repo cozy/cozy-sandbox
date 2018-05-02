@@ -59,7 +59,7 @@
     "cozy-scripts": "0.6.1",
     "cozy-ui": "7.18.0",
     "eslint-plugin-prettier": "2.6.0",
-    "preact": "8.2.7",
+    "preact": "8.2.9",
     "preact-compat": "3.18.0",
     "react-redux": "5.0.7",
     "react-router-dom": "4.2.2",
