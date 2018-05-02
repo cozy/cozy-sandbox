@@ -25,6 +25,7 @@ exports[`Accounts should be rendered correctly 1`] = `
       icon={null}
       label={null}
       onClick={null}
+      subtle={false}
       theme=""
       type="submit"
     >
