@@ -19,14 +19,7 @@ exports[`Apps should be rendered correctly 1`] = `
     tag="span"
   >
     <Button
-      busy={false}
-      className=""
-      disabled={false}
-      icon={null}
-      label={null}
-      onClick={null}
-      subtle={false}
-      theme=""
+      tag="button"
       type="submit"
     >
       Install app Trainline
