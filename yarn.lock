@@ -2887,18 +2887,7 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-cozy-app@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-0.7.1.tgz#2f5c320a27c41178ce370134c6dda7a503711012"
-  dependencies:
-    babel-eslint "^8.0.1"
-    eslint "^4.9.0"
-    eslint-config-prettier "^2.9.0"
-    eslint-plugin-prettier "^2.6.0"
-    eslint-plugin-react "^7.7.0"
-    prettier "^1.11.1"
-
-eslint-config-cozy-app@^0.7.3:
+eslint-config-cozy-app@0.7.3, eslint-config-cozy-app@^0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-0.7.3.tgz#68e9b28dc7de81df86c8e4697cf569072bbcc5e2"
   dependencies:
