@@ -2013,9 +2013,9 @@ cozy-client-js@^0.3.19:
   version "0.3.21"
   resolved "https://registry.yarnpkg.com/cozy-client-js/-/cozy-client-js-0.3.21.tgz#d27d0288077ce95139333c41dfb537b8584ff254"
 
-cozy-scripts@0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-0.8.1.tgz#aec20997fbfa5329440025f5cb4d98a9e5a03bb0"
+cozy-scripts@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-0.9.0.tgz#4bbce15cd1f4382562c701ba326d17e43d613d3f"
   dependencies:
     autoprefixer "8.5.1"
     babel-core "6.26.3"
