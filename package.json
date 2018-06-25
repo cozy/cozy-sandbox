@@ -58,7 +58,7 @@
     "cozy-client-js": "0.11.0",
     "cozy-scripts": "0.9.0",
     "cozy-ui": "10.0.0",
-    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-prettier": "2.6.1",
     "preact": "8.2.9",
     "preact-compat": "3.18.0",
     "react-redux": "5.0.7",
