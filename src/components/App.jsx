@@ -2,8 +2,7 @@ import React from 'react'
 import { Route, Switch, Redirect, HashRouter } from 'react-router-dom'
 
 import Sidebar from './Sidebar'
-import Apps from './Apps'
-import Accounts from './Accounts'
+import Intents from './Intents'
 
 const App = () => (
   <HashRouter>
@@ -11,10 +10,9 @@ const App = () => (
       <Sidebar />
       <main className="app-content">
         <Switch>
-          <Route path="/accounts" component={Accounts} />
-          <Route path="/apps" component={Apps} />
-          <Redirect from="/" to="/accounts" />
-          <Redirect from="*" to="/accounts" />
+          <Route path="/intents" component={Intents} />
+          <Redirect from="/" to="/intents" />
+          <Redirect from="*" to="/intents" />
         </Switch>
       </main>
     </div>
