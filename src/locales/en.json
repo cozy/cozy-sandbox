@@ -1,6 +1,5 @@
 {
   "Nav": {
-    "accounts": "Accounts",
-    "apps": "Applications"
+    "intents": "Intents"
   }
 }
