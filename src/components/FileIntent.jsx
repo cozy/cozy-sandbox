@@ -6,12 +6,14 @@ import { Button } from 'cozy-ui/react/Button'
 class FileIntent extends React.Component {
   constructor() {
     super()
-    this.state = { fileId: null }
+    this.state = { fileId: localStorage.getItem('fileId') }
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(ev) {
+    const fileId = ev.target.value
     this.setState({ fileId: ev.target.value })
+    localStorage.setItem('fileId', fileId)
   }
 
   render() {
