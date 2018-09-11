@@ -1,6 +1,7 @@
 import Apps from './Apps'
 import Accounts from './Accounts'
 import FileIntent from './FileIntent'
+import Claudy from './Claudy'
 import React from 'react'
 
 const styles = {
@@ -17,6 +18,7 @@ const Intents = () => {
       <Accounts />
       <Apps />
       <FileIntent />
+      <Claudy />
     </div>
   )
 }
