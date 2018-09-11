@@ -1,5 +1,6 @@
 import Apps from './Apps'
 import Accounts from './Accounts'
+import FileIntent from './FileIntent'
 import React from 'react'
 
 const Intents = () => {
@@ -7,6 +8,7 @@ const Intents = () => {
     <div>
       <Accounts />
       <Apps />
+      <FileIntent />
     </div>
   )
 }
