@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { Button } from 'cozy-ui/react/Button'
-import IntentOpener from 'cozy-ui/react/IntentOpener'
+import VerboseIntentOpener from './VerboseIntentOpener'
 
 const Accounts = () => (
   <div>
     <h1>Accounts</h1>
-    <IntentOpener
+    <VerboseIntentOpener
       action="CREATE"
       doctype="io.cozy.accounts"
       onComplete={res => alert('intent has completed ! ' + JSON.stringify(res))}
@@ -16,7 +16,7 @@ const Accounts = () => (
       }}
     >
       <Button>Create account for Trainline</Button>
-    </IntentOpener>
+    </VerboseIntentOpener>
   </div>
 )
 
