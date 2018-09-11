@@ -5,7 +5,6 @@ import 'babel-polyfill'
 import 'styles'
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { I18n } from 'cozy-ui/react/I18n'
