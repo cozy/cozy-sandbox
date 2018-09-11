@@ -9,7 +9,7 @@ class _VerboseIntentOpener extends React.Component {
     this.state = { v2: false }
   }
   handleChange(ev) {
-    this.setState({ v2: ev.target.value })
+    this.setState({ v2: ev.target.checked })
   }
 
   render() {
@@ -20,7 +20,7 @@ class _VerboseIntentOpener extends React.Component {
     return (
       <div>
         Client V2 :{' '}
-        <input value={v2} type="checkbox" onChange={this.handleChange} />
+        <input checked={v2} type="checkbox" onChange={this.handleChange} />
         <br />
         <pre>
           Action: {action}
