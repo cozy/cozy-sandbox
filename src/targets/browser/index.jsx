@@ -5,11 +5,15 @@ import 'babel-polyfill'
 import 'styles'
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { I18n } from 'cozy-ui/react/I18n'
+import CozyClient from 'cozy-client'
+import { Intents } from 'cozy-interapp'
 
 import store from 'lib/store'
+import { Provider as ClientProvider } from 'components/ClientProvider'
 
 if (__DEVELOPMENT__) {
   // Enables React dev tools for Preact
@@ -21,16 +25,18 @@ if (__DEVELOPMENT__) {
 }
 
 let appLocale
-const renderApp = function() {
+const renderApp = function(clientV2) {
   const App = require('components/App').default
   render(
     <I18n
       lang={appLocale}
       dictRequire={appLocale => require(`locales/${appLocale}`)}
     >
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <ClientProvider value={clientV2}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ClientProvider>
     </I18n>,
     document.querySelector('[role=application]')
   )
@@ -70,8 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const protocol = window.location ? window.location.protocol : 'https:'
 
+  const url = `${protocol}//${data.cozyDomain}`
+
+  const clientV2 = new CozyClient({
+    uri: url,
+    token: data.cozyToken
+  })
+  const intents = new Intents({ client: clientV2 })
+  clientV2.intents = intents
+
   cozy.client.init({
-    cozyURL: `${protocol}//${data.cozyDomain}`,
+    cozyURL: url,
     token: data.cozyToken
   })
   cozy.bar.init({
@@ -82,5 +97,5 @@ document.addEventListener('DOMContentLoaded', () => {
     replaceTitleOnMobile: true
   })
 
-  renderApp()
+  renderApp(clientV2)
 })

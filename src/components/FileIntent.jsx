@@ -3,7 +3,6 @@ import React from 'react'
 import VerboseIntentOpener from './VerboseIntentOpener'
 import { Button } from 'cozy-ui/react/Button'
 
-
 class FileIntent extends React.Component {
   constructor() {
     super()
@@ -16,8 +15,7 @@ class FileIntent extends React.Component {
   }
 
   render() {
-    const action = 'OPEN'
-    const doctype = 'io.cozy.files'
+    const client = this.context.client
     return (
       <div>
         <h1>Open file</h1>
