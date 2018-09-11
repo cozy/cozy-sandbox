@@ -20,7 +20,7 @@ class FileIntent extends React.Component {
     const doctype = 'io.cozy.files'
     return (
       <div>
-        <h1>File intent</h1>
+        <h1>Open file</h1>
         File id :{' '}
         <input
           type="text"

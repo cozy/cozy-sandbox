@@ -5,7 +5,7 @@ import VerboseIntentOpener from './VerboseIntentOpener'
 
 const Accounts = () => (
   <div>
-    <h1>Accounts</h1>
+    <h1>Create account</h1>
     <VerboseIntentOpener
       action="CREATE"
       doctype="io.cozy.accounts"

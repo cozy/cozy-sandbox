@@ -5,7 +5,7 @@ import VerboseIntentOpener from './VerboseIntentOpener'
 
 const Apps = () => (
   <div>
-    <h1>Apps</h1>
+    <h1>Install app</h1>
     <VerboseIntentOpener
       action="INSTALL"
       doctype="io.cozy.apps"
