@@ -3,9 +3,17 @@ import Accounts from './Accounts'
 import FileIntent from './FileIntent'
 import React from 'react'
 
+const styles = {
+  grid: {
+    display: 'grid',
+    gridGap: 10,
+    gridTemplateColumns: 'repeat(auto-fill, minmax(300px,1fr))'
+  }
+}
+
 const Intents = () => {
   return (
-    <div>
+    <div style={styles.grid}>
       <Accounts />
       <Apps />
       <FileIntent />
