@@ -1,12 +1,13 @@
 import React from 'react'
 import { Route, Switch, Redirect, HashRouter } from 'react-router-dom'
 
+import { Layout } from 'cozy-ui/react'
 import Sidebar from './Sidebar'
 import Intents from './Intents'
 
 const App = () => (
   <HashRouter>
-    <div className="app-wrapper o-layout--2panes">
+    <Layout>
       <Sidebar />
       <main className="app-content">
         <Switch>
@@ -15,7 +16,7 @@ const App = () => (
           <Redirect from="*" to="/intents" />
         </Switch>
       </main>
-    </div>
+    </Layout>
   </HashRouter>
 )
 
