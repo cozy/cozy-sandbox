@@ -3,11 +3,10 @@
 exports[`Accounts should be rendered correctly 1`] = `
 <div>
   <h1>
-    Accounts
+    Create account
   </h1>
-  <IntentOpener
+  <VerboseIntentOpener
     action="CREATE"
-    closable={true}
     doctype="io.cozy.accounts"
     onComplete={[Function]}
     onDismiss={[Function]}
@@ -16,7 +15,6 @@ exports[`Accounts should be rendered correctly 1`] = `
         "slug": "trainline",
       }
     }
-    tag="span"
   >
     <Button
       tag="button"
@@ -24,6 +22,6 @@ exports[`Accounts should be rendered correctly 1`] = `
     >
       Create account for Trainline
     </Button>
-  </IntentOpener>
+  </VerboseIntentOpener>
 </div>
 `;

@@ -1,23 +1,25 @@
 import React from 'react'
 
+import VerboseIntentOpener from './VerboseIntentOpener'
 import { Button } from 'cozy-ui/react/Button'
-import IntentOpener from 'cozy-ui/react/IntentOpener'
 
 class FileIntent extends React.Component {
   constructor() {
     super()
-    this.state = { fileId: null }
+    this.state = { fileId: localStorage.getItem('fileId') }
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(ev) {
+    const fileId = ev.target.value
     this.setState({ fileId: ev.target.value })
+    localStorage.setItem('fileId', fileId)
   }
 
   render() {
     return (
       <div>
-        <h1>File intent</h1>
+        <h1>Open file</h1>
         File id :{' '}
         <input
           type="text"
@@ -25,7 +27,7 @@ class FileIntent extends React.Component {
           value={this.state.fileId}
         />
         <br />
-        <IntentOpener
+        <VerboseIntentOpener
           action="OPEN"
           doctype="io.cozy.files"
           options={{ id: this.state.fileId }}
@@ -35,7 +37,7 @@ class FileIntent extends React.Component {
           onDismiss={() => alert('intent has been dismissed !')}
         >
           <Button disabled={!this.state.fileId}>Open file</Button>
-        </IntentOpener>
+        </VerboseIntentOpener>
       </div>
     )
   }

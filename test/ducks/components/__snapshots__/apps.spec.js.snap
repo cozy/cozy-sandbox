@@ -3,11 +3,10 @@
 exports[`Apps should be rendered correctly 1`] = `
 <div>
   <h1>
-    Apps
+    Install app
   </h1>
-  <IntentOpener
+  <VerboseIntentOpener
     action="INSTALL"
-    closable={true}
     doctype="io.cozy.apps"
     onComplete={[Function]}
     onDismiss={[Function]}
@@ -16,7 +15,6 @@ exports[`Apps should be rendered correctly 1`] = `
         "slug": "trainline",
       }
     }
-    tag="span"
   >
     <Button
       tag="button"
@@ -24,6 +22,6 @@ exports[`Apps should be rendered correctly 1`] = `
     >
       Install app Trainline
     </Button>
-  </IntentOpener>
+  </VerboseIntentOpener>
 </div>
 `;

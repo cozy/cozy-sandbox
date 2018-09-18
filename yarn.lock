@@ -2063,6 +2063,21 @@ cozy-client-js@^0.3.19:
   version "0.3.21"
   resolved "https://registry.yarnpkg.com/cozy-client-js/-/cozy-client-js-0.3.21.tgz#d27d0288077ce95139333c41dfb537b8584ff254"
 
+cozy-client@^2.13.1:
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-2.13.1.tgz#5f5d83ee88bf367e1bb783910c68d87769a53bb5"
+  dependencies:
+    cozy-stack-client "^2.10.4"
+    lodash "^4.17.5"
+    prop-types "^15.6.0"
+    react "^16.2.0"
+    react-redux "^5.0.6"
+    redux "^3.7.2"
+
+cozy-interapp@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/cozy-interapp/-/cozy-interapp-0.2.3.tgz#f7f615de03eb5722639421af1e7dbd24ee100d5c"
+
 cozy-scripts@^0.10.6:
   version "0.10.6"
   resolved "https://registry.yarnpkg.com/cozy-scripts/-/cozy-scripts-0.10.6.tgz#06835f70ad2a6fc573917ffa09fddc472a777d95"
@@ -2109,6 +2124,12 @@ cozy-scripts@^0.10.6:
     webpack-dev-server "2.11.3"
     webpack-merge "4.1.4"
     write-file-webpack-plugin "4.4.0"
+
+cozy-stack-client@^2.10.4:
+  version "2.10.4"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-2.10.4.tgz#7801af0a0e0f46151cf4d2b53969447efe582195"
+  dependencies:
+    mime-types "^2.1.18"
 
 cozy-ui@10.4.1:
   version "10.4.1"
@@ -5981,11 +6002,21 @@ miller-rabin@^4.0.0:
   version "1.33.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.33.0.tgz#a3492050a5cb9b63450541e39d9788d2272783db"
 
+mime-db@~1.36.0:
+  version "1.36.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.36.0.tgz#5020478db3c7fe93aad7bbcc4dcf869c43363397"
+
 mime-types@^2.1.12, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.7:
   version "2.1.18"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.18.tgz#6f323f60a83d11146f831ff11fd66e2fe5503bb8"
   dependencies:
     mime-db "~1.33.0"
+
+mime-types@^2.1.18:
+  version "2.1.20"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.20.tgz#930cb719d571e903738520f8470911548ca2cc19"
+  dependencies:
+    mime-db "~1.36.0"
 
 mime@1.4.1:
   version "1.4.1"
@@ -7354,6 +7385,10 @@ preact-compat@3.18.0, preact-compat@^3.17.0:
     prop-types "^15.5.8"
     standalone-react-addons-pure-render-mixin "^0.1.1"
 
+preact-context@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/preact-context/-/preact-context-1.1.0.tgz#7303caacfea86ed4ffdff8edc945ea73607a41e6"
+
 preact-portal@^1.1.2:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/preact-portal/-/preact-portal-1.1.3.tgz#22cdd3ecf6ad9aaa3f830607a9c6591de90aedb7"
@@ -7828,6 +7863,15 @@ react@16.4.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react@^16.2.0:
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.5.0.tgz#f2c1e754bf9751a549d9c6d9aca41905beb56575"
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    schedule "^0.3.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -8366,6 +8410,12 @@ sax@0.5.x:
 sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+
+schedule@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/schedule/-/schedule-0.3.0.tgz#1be2ab2fc2e768536269ce7326efb478d6c045e8"
+  dependencies:
+    object-assign "^4.1.1"
 
 schema-utils@^0.3.0:
   version "0.3.0"
