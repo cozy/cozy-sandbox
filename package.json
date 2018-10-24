@@ -63,7 +63,7 @@
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-react": "^7.11.1",
     "preact": "8.3.1",
-    "preact-compat": "3.18.0",
+    "preact-compat": "3.18.4",
     "preact-context": "^1.1.0",
     "react-redux": "5.0.7",
     "react-router-dom": "4.3.1",
