@@ -65,7 +65,7 @@
     "preact": "8.3.1",
     "preact-compat": "3.18.0",
     "preact-context": "^1.1.0",
-    "react-redux": "5.0.7",
+    "react-redux": "5.1.1",
     "react-router-dom": "4.3.1",
     "redux": "4.0.0",
     "redux-raven-middleware": "1.2.0",
