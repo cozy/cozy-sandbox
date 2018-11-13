@@ -60,7 +60,7 @@
     "cozy-interapp": "^0.2.3",
     "cozy-scripts": "^0.10.6",
     "cozy-ui": "10.9.2",
-    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "preact": "8.3.1",
     "preact-compat": "3.18.0",
