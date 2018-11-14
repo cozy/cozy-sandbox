@@ -37,8 +37,7 @@
   },
   "homepage": "https://github.com/cozy/cozy-interapp-sandbox#readme",
   "devDependencies": {
-    "babel-polyfill": "6.26.0",
-    "babel-preset-cozy-app": "1.1.1",
+    "babel-preset-cozy-app": "^1.2.1",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "eslint": "5.9.0",
@@ -54,12 +53,14 @@
     "stylint": "1.5.9"
   },
   "dependencies": {
+    "babel-loader": "^8.0.4",
     "cozy-bar": "^6.7.5",
     "cozy-client": "^2.13.1",
     "cozy-client-js": "0.11.0",
     "cozy-interapp": "^0.2.3",
     "cozy-scripts": "^1.1.2",
     "cozy-ui": "10.9.2",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-react": "^7.11.1",
     "preact": "8.3.1",

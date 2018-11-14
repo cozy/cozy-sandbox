@@ -212,11 +212,6 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz#bbb3fbee98661c569034237cc03967ba99b4f250"
   integrity sha512-CYAOUCARwExnEixLdB6sDm2dIJ/YgEAKDM1MOeMeZu9Ld/bDgVo8aiWrXwcY7OBh+1Ea2uUcVRcxKk0GJvW7QA==
 
-"@babel/helper-plugin-utils@^7.0.0-beta.46":
-  version "7.0.0-beta.46"
-  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.46.tgz#f630adbd9d645d0ba2e43f4955b4ad61f44ccdf4"
-  integrity sha512-eRTFH+/1rqDfzx+Z//CYk4TNwhfPQpM/TCs4CmHu2DwCPrqFnKUZLI1KgStfLf//c8FdOqx/U9EPec7s8CbUIA==
-
 "@babel/helper-regex@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-regex/-/helper-regex-7.0.0.tgz#2c1718923b57f9bbe64705ffe5640ac64d9bdb27"
@@ -1713,7 +1708,7 @@ babel-jest@23.6.0, babel-jest@^23.6.0:
     babel-plugin-istanbul "^4.1.6"
     babel-preset-jest "^23.2.0"
 
-babel-loader@8.0.4:
+babel-loader@8.0.4, babel-loader@^8.0.4:
   version "8.0.4"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.0.4.tgz#7bbf20cbe4560629e2e41534147692d3fecbdce6"
   integrity sha512-fhBhNkUToJcW9nV46v8w87AJOwAJDz84c1CL57n3Stj73FANM/b9TbCUK4YhdOwEyZ+OxhYpdeZDNzSI29Firw==
@@ -2119,21 +2114,7 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-cozy-app@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.1.1.tgz#ca53c4b4b005008e8e96054a5a1bb9bb18cd5c51"
-  integrity sha512-R7L99fHlfmywc70Gll6vKSEs4igv4eEwDigY2jaWPSFeiIcRMKp9jaIdMbTSxKQ6beazzTarafoKIeg4+pUK1A==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0-beta.46"
-    babel-plugin-transform-class-properties "^6.24.1"
-    babel-plugin-transform-object-rest-spread "^6.26.0"
-    babel-plugin-transform-react-jsx "^6.24.1"
-    babel-plugin-transform-runtime "^6.23.0"
-    babel-preset-env "^1.6.1"
-    babel-preset-react "^6.24.1"
-    babel-runtime "^6.26.0"
-
-babel-preset-cozy-app@1.2.1:
+babel-preset-cozy-app@1.2.1, babel-preset-cozy-app@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.2.1.tgz#74c631a065dca803e602190194a091b648cc41ff"
   integrity sha512-psTt++cwUeoqa0SXcJHSX5DEFkXY3oMOgpqAVZ+HUCq++Lnexedq0FwbE9dE5iO3T0DtkOzcJME0HxWDHbBCQw==
@@ -4356,6 +4337,13 @@ eslint-config-prettier@2.9.0:
   dependencies:
     get-stdin "^5.0.1"
 
+eslint-config-prettier@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.3.0.tgz#41afc8d3b852e757f06274ed6c44ca16f939a57d"
+  integrity sha512-Bc3bh5bAcKNvs3HOpSi6EfGA2IIp7EzWcg2tS4vP7stnXu/J1opihHDM7jI9JCIckyIDTgZLSWn7J3HY0j2JfA==
+  dependencies:
+    get-stdin "^6.0.0"
+
 eslint-loader@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-2.1.1.tgz#2a9251523652430bfdd643efdb0afc1a2a89546a"
@@ -5303,6 +5291,11 @@ get-stdin@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
   integrity sha1-Ei4WFZHiH/TFJTAwVpPyDmOTo5g=
+
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
+  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
 
 get-stream@^3.0.0:
   version "3.0.0"
