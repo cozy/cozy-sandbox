@@ -3,6 +3,7 @@ import Accounts from './Accounts'
 import FileIntent from './FileIntent'
 import Claudy from './Claudy'
 import PickFolder from './PickFolder'
+import Custom from './Custom'
 import React from 'react'
 
 const styles = {
@@ -21,6 +22,7 @@ const Intents = () => {
       <FileIntent />
       <Claudy />
       <PickFolder />
+      <Custom />
     </div>
   )
 }
