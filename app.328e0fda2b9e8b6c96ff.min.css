@@ -2502,6 +2502,9 @@ table.c-table td.c-table-ellipsis > div > div {
 .app-content {
   padding: 1em;
 }
+.custom-intent label {
+  margin-top: 0;
+}
 .c-btn--1NF6Q[aria-busy=true] > span::after,
 .c-btn--regular--11Z3s[aria-busy=true] > span::after,
 .c-btn--secondary--2-gD0[aria-busy=true] > span::after,
