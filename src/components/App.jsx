@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect, HashRouter } from 'react-router-dom'
 
-import { Layout } from 'cozy-ui/react'
+import { Layout, IconSprite } from 'cozy-ui/react'
 import Sidebar from './Sidebar'
 import Intents from './Intents'
 
@@ -17,6 +17,7 @@ const App = () => (
         </Switch>
       </main>
     </Layout>
+    <IconSprite />
   </HashRouter>
 )
 
