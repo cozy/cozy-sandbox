@@ -53,9 +53,8 @@ mobile/fastlane/Error*.png
 mobile/fastlane/Preview.html
 mobile/Preview.html
 
+.eslintcache
 
 # Default
 # /!\ KEEP THIS SECTION THE LAST ONE
 !.gitkeep
-
-.eslintcache

@@ -3,12 +3,9 @@
 /* eslint-env jest */
 
 import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme'
 
-import Apps from '../../../src/components/Apps'
-
-Enzyme.configure({ adapter: new Adapter() })
+import Apps from 'components/Apps'
 
 describe('Apps', () => {
   it('should be rendered correctly', () => {
