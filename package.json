@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/cozy/cozy-sandbox#readme",
   "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
     "babel-preset-cozy-app": "1.2.1",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.7.0",
