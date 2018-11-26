@@ -1,28 +1,28 @@
-[![Travis build status shield](https://img.shields.io/travis/cozy/cozy-interapp-sandbox/master.svg)](https://travis-ci.org/cozy/cozy-interapp-sandbox)
-[![Github Release version shield](https://img.shields.io/github/tag/cozy/cozy-interapp-sandbox.svg)](https://github.com/cozy/cozy-interapp-sandbox/releases)
+[![Travis build status shield](https://img.shields.io/travis/cozy/cozy-sandbox/master.svg)](https://travis-ci.org/cozy/cozy-sandbox)
+[![Github Release version shield](https://img.shields.io/github/tag/cozy/cozy-sandbox.svg)](https://github.com/cozy/cozy-sandbox/releases)
 [![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
 
 
-# Cozy Interapp Sandbox
+# Cozy Sandbox
 
-## What's Cozy Interapp Sandbox?
+## What's Cozy Sandbox?
 
-Cozy Interapp Sandbox is a common tool to help developer test Cozy's interapp mechanisms.
+Cozy Sandbox is a common tool to help developer test Cozy's interapp mechanisms.
 
 
 ## Hack
 
 _:pushpin: Note:_ we recommend to use [Yarn] instead of NPM for package management. Don't hesitate to [install][yarn-install] and use it for your Cozy projects, it's now our main node packages tool for Cozy official apps.
 
-### Install and run in dev mode
+### Install
 
-Hacking the Cozy Cozy Interapp Sandbox app requires you to [setup a dev environment][setup].
+Hacking the Cozy Cozy Sandbox app requires you to [setup a dev environment][setup].
 
 You can then clone the app repository and install dependencies:
 
 ```sh
-$ git clone https://github.com/cozy/cozy-interapp-sandbox.git
-$ cd cozy-interapp-sandbox
+$ git clone https://github.com/Cozy/cozy-sandbox.git
+$ cd cozy-sandbox
 $ yarn install
 ```
 
@@ -31,24 +31,17 @@ $ yarn install
 Cozy's apps use a standard set of _npm scripts_ to run common tasks, like watch, lint, test, build…
 
 
-### Run it inside the VM
+### Run it inside a Cozy using Docker
 
-You can easily view your current running app, you can use the [cozy-stack docker image][cozy-stack-docker]:
-
-```sh
-# in a terminal, run your app in watch mode
-$ cd cozy-interapp-sandbox
-$ yarn watch:browser
-```
+You can run your application inside a Cozy thanks to the [cozy-stack docker image][cozy-stack-docker]:
 
 ```sh
-# in another terminal, run the docker container
-$ docker run --rm -it -p 8080:8080 -v "$(pwd)/build":/data/cozy-app/cozy-interapp-sandbox cozy/cozy-app-dev
-or
-$ yarn stack:docker
+# in a terminal, run your app in watch mode with a docker running Cozy
+$ cd cozy-sandbox
+$ yarn start
 ```
 
-your app is available at http://cozy-interapp-sandbox.cozy.tools:8080.
+After the build and the stack launched, your app is now available at http://sandbox.cozy.tools:8080.
 
 
 ### Living on the edge
@@ -77,7 +70,7 @@ yarn link cozy-ui
 Tests are run by [jest] under the hood. You can easily run the tests suite with:
 
 ```sh
-$ cd cozy-interapp-sandbox
+$ cd cozy-sandbox
 $ yarn test
 ```
 
@@ -98,7 +91,7 @@ Whenever your app needs to use a given `doctype`, you should:
 
 ### Open a Pull-Request
 
-If you want to work on Cozy Interapp Sandbox and submit code modifications, feel free to open pull-requests! See the [contributing guide][contribute] for more information about how to properly open pull-requests.
+If you want to work on Cozy Sandbox and submit code modifications, feel free to open pull-requests! See the [contributing guide][contribute] for more information about how to properly open pull-requests.
 
 
 ## Community
@@ -125,7 +118,7 @@ As a _developer_, you must [configure the transifex client][tx-client], and clai
 
 ### Maintainer
 
-The lead maintainer for Cozy Interapp Sandbox is [cozy](https://github.com/cozy), send him/her a :beers: to say hello!
+The lead maintainer for Cozy Sandbox is [Cozy](https://github.com/Cozy), send him/her a :beers: to say hello!
 
 
 ### Get in touch
@@ -140,7 +133,7 @@ You can reach the Cozy Community by:
 
 ## License
 
-Cozy Interapp Sandbox is developed by cozy and distributed under the [AGPL v3 license][agpl-3.0].
+Cozy Sandbox is developed by Cozy and distributed under the [AGPL v3 license][agpl-3.0].
 
 
 

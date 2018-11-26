@@ -1,5 +1,5 @@
-import { createContext } from 'preact-context'
+import React from 'react'
 
-const { Provider, Consumer } = createContext('client')
+const { Provider, Consumer } = React.createContext('client')
 
 export { Provider, Consumer }

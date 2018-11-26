@@ -6,26 +6,29 @@ exports[`App component only should be mounted correctly 1`] = `
     monoColumn={false}
   >
     <Wrapper />
-    <main
-      className="app-content"
-    >
-      <Switch>
-        <Route
-          component={[Function]}
-          path="/intents"
-        />
-        <Redirect
-          from="/"
-          push={false}
-          to="/intents"
-        />
-        <Redirect
-          from="*"
-          push={false}
-          to="/intents"
-        />
-      </Switch>
-    </main>
+    <Main>
+      <Content
+        className="app-content"
+      >
+        <Switch>
+          <Route
+            component={[Function]}
+            path="/intents"
+          />
+          <Redirect
+            from="/"
+            push={false}
+            to="/intents"
+          />
+          <Redirect
+            from="*"
+            push={false}
+            to="/intents"
+          />
+        </Switch>
+      </Content>
+    </Main>
+    <IconSprite />
   </Layout>
 </HashRouter>
 `;

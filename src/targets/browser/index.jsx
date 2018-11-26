@@ -1,27 +1,14 @@
-/* global cozy, __DEVELOPMENT__ */
-
-import 'babel-polyfill'
+/* global cozy */
 
 import 'styles'
 
 import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { I18n } from 'cozy-ui/react/I18n'
 import CozyClient from 'cozy-client'
+import { render } from 'react-dom'
+import { I18n } from 'cozy-ui/react/I18n'
 import { Intents } from 'cozy-interapp'
 
-import store from 'lib/store'
 import { Provider as ClientProvider } from 'components/ClientProvider'
-
-if (__DEVELOPMENT__) {
-  // Enables React dev tools for Preact
-  // Cannot use import as we are in a condition
-  require('preact/devtools')
-
-  // Export React to window for the devtools
-  window.React = React
-}
 
 let appLocale
 const renderApp = function(clientV2) {
@@ -32,19 +19,11 @@ const renderApp = function(clientV2) {
       dictRequire={appLocale => require(`locales/${appLocale}`)}
     >
       <ClientProvider value={clientV2}>
-        <Provider store={store}>
-          <App />
-        </Provider>
+        <App />
       </ClientProvider>
     </I18n>,
     document.querySelector('[role=application]')
   )
-}
-
-if (module.hot) {
-  module.hot.accept('components/App', function() {
-    renderApp()
-  })
 }
 
 // return a defaultData if the template hasn't been replaced by cozy-stack
@@ -53,22 +32,24 @@ const getDataOrDefault = function(toTest, defaultData) {
   return templateRegex.test(toTest) ? defaultData : toTest
 }
 
+// initial rendering of the application
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('[role=application]')
   const data = root.dataset
 
-  // default data will allow to display correctly the cozy-bar
-  // in the standalone (without cozy-stack connexion)
   const appIcon = getDataOrDefault(
     data.cozyIconPath,
     require('../vendor/assets/icon.svg')
   )
 
-  const appEditor = getDataOrDefault(data.cozyAppEditor, '')
+  const appNamePrefix = getDataOrDefault(
+    data.cozyAppNamePrefix || require('../../../manifest.webapp').name_prefix,
+    ''
+  )
 
   const appName = getDataOrDefault(
     data.cozyAppName,
-    require('../../../package.json').name
+    require('../../../manifest.webapp').name
   )
 
   appLocale = getDataOrDefault(data.cozyLocale, 'en')
@@ -88,9 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
     cozyURL: url,
     token: data.cozyToken
   })
+
+  // initialize the bar, common of all applications, it allows
+  // platform features like apps navigation without doing anything
   cozy.bar.init({
-    appEditor: appEditor,
     appName: appName,
+    appNamePrefix: appNamePrefix,
     iconPath: appIcon,
     lang: appLocale,
     replaceTitleOnMobile: true
