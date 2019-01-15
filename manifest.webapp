@@ -1,6 +1,6 @@
 {
   "name": "Cozy Sandbox",
-  "slug": "sandbox",
+  "slug": "app",
   "icon": "icon.svg",
   "categories": [],
   "version": "0.1.0",
@@ -26,11 +26,5 @@
         "GET"
       ]
     }
-  },
-  "locales": {
-    "en": {}
-  },
-  "langs": [
-    "en"
-  ]
+  }
 }
