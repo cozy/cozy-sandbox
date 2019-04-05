@@ -6,6 +6,7 @@ import { Layout, Main, Content } from 'cozy-ui/react/Layout'
 import { Sprite as IconSprite } from 'cozy-ui/react/Icon'
 import Sidebar from './Sidebar'
 import Intents from './Intents'
+import Documents from './Documents'
 
 const App = () => (
   <HashRouter>
@@ -15,6 +16,7 @@ const App = () => (
         <Content className="app-content">
           <Switch>
             <Route path="/intents" component={Intents} />
+            <Route path="/documents" component={Documents} />
             <Redirect from="/" to="/intents" />
             <Redirect from="*" to="/intents" />
           </Switch>

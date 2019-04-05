@@ -7,6 +7,7 @@ import CozyClient from 'cozy-client'
 import { render } from 'react-dom'
 import { I18n } from 'cozy-ui/react/I18n'
 import { Intents } from 'cozy-interapp'
+import manifest from '../../../manifest.webapp'
 
 import { Provider as ClientProvider } from 'components/ClientProvider'
 
@@ -57,9 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const protocol = window.location ? window.location.protocol : 'https:'
 
   const url = `${protocol}//${data.cozyDomain}`
+  // add schema based on app manifest
+  let schema = {}
+  for (const prop in manifest.permissions) {
+    schema[prop] = {
+      doctype: manifest.permissions[prop].type,
+      attributes: {}
+    }
+  }
 
   const clientV2 = new CozyClient({
     uri: url,
+    schema,
     token: data.cozyToken
   })
   const intents = new Intents({ client: clientV2 })
@@ -67,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cozy.client.init({
     cozyURL: url,
+    schema: {},
     token: data.cozyToken
   })
 

@@ -23,6 +23,10 @@
       "description": "Required by the cozy-bar to display the icons of the apps",
       "type": "io.cozy.apps",
       "verbs": ["GET"]
+    },
+    "apps.suggestions": {
+      "description": "Required to play within the app",
+      "type": "io.cozy.apps.suggestions"
     }
   }
 }
