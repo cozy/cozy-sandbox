@@ -4,7 +4,8 @@ module.exports = {
   setupFiles: ['<rootDir>/test/jestLib/setup.js'],
   moduleDirectories: ['src', 'node_modules'],
   transform: {
-    '^.+\\.(js|jsx)?$': '<rootDir>/test/jestLib/babel-transformer.js'
+    '^.+\\.(js|jsx)?$': 'babel-jest',
+    '^.+\\.(webapp)?$': '<rootDir>/test/jestLib/json-transformer.js'
   },
   moduleNameMapper: {
     '\\.(png|gif|jpe?g|svg)$': '<rootDir>/test/__mocks__/fileMock.js',

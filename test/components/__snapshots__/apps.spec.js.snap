@@ -17,6 +17,7 @@ exports[`Apps should be rendered correctly 1`] = `
     }
   >
     <Button
+      size="normal"
       tag="button"
       type="submit"
     >

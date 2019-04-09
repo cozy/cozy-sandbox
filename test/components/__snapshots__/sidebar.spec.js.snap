@@ -16,6 +16,19 @@ exports[`Sidebar component should be rendered correctly 1`] = `
         Intents
       </Unknown>
     </NavItem>
+    <NavItem>
+      <Unknown
+        className="c-nav-link"
+        to="/documents"
+      >
+        <Icon
+          className="c-nav-icon"
+          icon="test-file-stub"
+          spin={false}
+        />
+        Documents
+      </Unknown>
+    </NavItem>
   </Nav>
 </Sidebar>
 `;
