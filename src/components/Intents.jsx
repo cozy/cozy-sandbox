@@ -4,6 +4,7 @@ import FileIntent from './FileIntent'
 import Claudy from './Claudy'
 import PickFolder from './PickFolder'
 import Custom from './Custom'
+import Redirect from './Redirect'
 import React from 'react'
 
 const styles = {
@@ -23,6 +24,7 @@ const Intents = () => {
       <Claudy />
       <PickFolder />
       <Custom />
+      <Redirect />
     </div>
   )
 }
