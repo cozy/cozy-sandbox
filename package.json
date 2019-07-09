@@ -46,7 +46,7 @@
     "cozy-bar": "6.10.0",
     "cozy-client": "3.6.4",
     "cozy-client-js": "0.14.2",
-    "cozy-interapp": "0.2.13",
+    "cozy-interapp": "0.4.5",
     "cozy-scripts": "1.13.0",
     "cozy-ui": "17.2.0",
     "eslint-config-cozy-app": "1.1.4",
