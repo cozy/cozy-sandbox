@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "cozy-bar": "6.10.0",
-    "cozy-client": "3.6.4",
+    "cozy-client": "6.49.0",
     "cozy-client-js": "0.14.2",
     "cozy-interapp": "0.4.5",
     "cozy-scripts": "1.13.0",
