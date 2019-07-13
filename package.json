@@ -40,7 +40,7 @@
     "prettier": "1.15.2",
     "react-hot-loader": "4.8.0",
     "react-test-renderer": "16.7.0",
-    "stylint": "1.5.9"
+    "stylint": "2.0.0"
   },
   "dependencies": {
     "cozy-bar": "6.10.0",
