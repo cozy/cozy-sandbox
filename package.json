@@ -47,7 +47,7 @@
     "cozy-client": "6.49.0",
     "cozy-client-js": "0.14.2",
     "cozy-interapp": "0.4.6",
-    "cozy-scripts": "1.13.0",
+    "cozy-scripts": "1.15.0",
     "cozy-ui": "17.2.0",
     "eslint-config-cozy-app": "1.1.4",
     "react": "16.7.0",
