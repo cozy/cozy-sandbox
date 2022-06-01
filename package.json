@@ -49,7 +49,7 @@
     "cozy-interapp": "0.4.6",
     "cozy-scripts": "1.13.0",
     "cozy-ui": "17.2.0",
-    "eslint-config-cozy-app": "1.1.4",
+    "eslint-config-cozy-app": "1.6.0",
     "react": "16.7.0",
     "react-dom": "16.7.0",
     "react-router-dom": "4.3.1"
