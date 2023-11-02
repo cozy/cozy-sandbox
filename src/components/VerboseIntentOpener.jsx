@@ -14,9 +14,9 @@ class _VerboseIntentOpener extends React.Component {
 
   render() {
     const { client, ...forwardProps } = this.props
-    const { action, doctype, options } = this.props
+    const { action, doctype, options, create } = this.props
     const { v2 } = this.state
-    const create = v2 ? client.intents.create.bind(client.intents) : undefined
+    const createAction = create ? create : client.intents.create.bind(client.intents)
     return (
       <div>
         Client V2 :{' '}
@@ -29,7 +29,7 @@ class _VerboseIntentOpener extends React.Component {
           {'\n'}
           Options: {JSON.stringify(options, null, 2)}
         </pre>
-        <IntentOpener create={create} {...forwardProps} />
+        <IntentOpener create={createAction} {...forwardProps}  />
       </div>
     )
   }
