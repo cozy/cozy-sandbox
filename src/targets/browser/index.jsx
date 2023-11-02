@@ -17,14 +17,14 @@ import { Provider as ClientProvider } from 'components/ClientProvider'
 
 import App from 'components/App'
 let appLocale
-const renderApp = function(clientV2) {
+const renderApp = function(cozyClient) {
   render(
     <BreakpointsProvider>
     <I18n
       lang={appLocale}
       dictRequire={appLocale => require(`locales/${appLocale}`)}
     >
-      <ClientProvider value={clientV2}>
+      <ClientProvider value={cozyClient}>
         <App />
       </ClientProvider>
     </I18n>
@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const url = `${protocol}//${data.cozyDomain}`
 
-  const clientV2 = new CozyClient({
+  const cozyClient = new CozyClient({
     uri: url,
     token: data.cozyToken
   })
-  const intents = new Intents({ client: clientV2 })
-  clientV2.intents = intents
+  const intents = new Intents({ client: cozyClient })
+  cozyClient.intents = intents
 
 
   // initialize the bar, common of all applications, it allows
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     iconPath: appIcon,
     lang: appLocale,
     replaceTitleOnMobile: true,
-    cozyClient: clientV2
+    cozyClient: cozyClient
   })
 
-  renderApp(clientV2)
+  renderApp(cozyClient)
 })
