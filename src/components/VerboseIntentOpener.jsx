@@ -1,5 +1,5 @@
 import React from 'react'
-import IntentOpener from 'cozy-ui/react/IntentOpener'
+import IntentOpener from 'cozy-ui/transpiled/react/deprecated/IntentOpener'
 import { Consumer } from './ClientProvider'
 
 class _VerboseIntentOpener extends React.Component {

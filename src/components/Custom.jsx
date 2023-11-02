@@ -1,10 +1,10 @@
 import React from 'react'
 
 import VerboseIntentOpener from './VerboseIntentOpener'
-import { Button } from 'cozy-ui/react/Button'
-import Input from 'cozy-ui/react/Input'
-import Textarea from 'cozy-ui/react/Textarea'
-import Label from 'cozy-ui/react/Label'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import Input from 'cozy-ui/transpiled/react/Input'
+import Textarea from 'cozy-ui/transpiled/react/Textarea'
+import Label from 'cozy-ui/transpiled/react/Label'
 
 class FileIntent extends React.Component {
   constructor() {
@@ -109,9 +109,7 @@ class FileIntent extends React.Component {
           }
           onDismiss={() => alert('intent has been dismissed !')}
         >
-          <Button disabled={!action || !doctype}>
-            Shake the magic box and see
-          </Button>
+          <Button disabled={!action || !doctype} label={'Shake the magic box & see'} />
         </VerboseIntentOpener>
       </div>
     )

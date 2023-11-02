@@ -1,3 +1,6 @@
+import 'cozy-ui/transpiled/react/stylesheet.css'
+import 'cozy-ui/dist/cozy-ui.utils.min.css'
+
 /* global cozy */
 
 import 'styles'
@@ -5,15 +8,18 @@ import 'styles'
 import React from 'react'
 import CozyClient from 'cozy-client'
 import { render } from 'react-dom'
-import { I18n } from 'cozy-ui/react/I18n'
+import I18n from 'cozy-ui/transpiled/react/providers/I18n'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
+
 import { Intents } from 'cozy-interapp'
 
 import { Provider as ClientProvider } from 'components/ClientProvider'
 
+import App from 'components/App'
 let appLocale
 const renderApp = function(clientV2) {
-  const App = require('components/App').default
   render(
+    <BreakpointsProvider>
     <I18n
       lang={appLocale}
       dictRequire={appLocale => require(`locales/${appLocale}`)}
@@ -21,7 +27,8 @@ const renderApp = function(clientV2) {
       <ClientProvider value={clientV2}>
         <App />
       </ClientProvider>
-    </I18n>,
+    </I18n>
+    </BreakpointsProvider>,
     document.querySelector('[role=application]')
   )
 }
@@ -65,10 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const intents = new Intents({ client: clientV2 })
   clientV2.intents = intents
 
-  cozy.client.init({
-    cozyURL: url,
-    token: data.cozyToken
-  })
 
   // initialize the bar, common of all applications, it allows
   // platform features like apps navigation without doing anything
@@ -77,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     appNamePrefix: appNamePrefix,
     iconPath: appIcon,
     lang: appLocale,
-    replaceTitleOnMobile: true
+    replaceTitleOnMobile: true,
+    cozyClient: clientV2
   })
 
   renderApp(clientV2)

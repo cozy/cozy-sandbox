@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button } from 'cozy-ui/react/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import VerboseIntentOpener from './VerboseIntentOpener'
 
 const Accounts = () => (
@@ -14,8 +14,9 @@ const Accounts = () => (
       options={{
         slug: 'trainline'
       }}
+      closable={false}
     >
-      <Button>Create account for Trainline</Button>
+      <Button label={'Create account for Trainline'} />
     </VerboseIntentOpener>
   </div>
 )

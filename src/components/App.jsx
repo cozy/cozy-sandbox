@@ -1,13 +1,15 @@
 import React from 'react'
-import { hot } from 'react-hot-loader'
 import { Route, Switch, Redirect, HashRouter } from 'react-router-dom'
 
-import { Layout, Main, Content } from 'cozy-ui/react/Layout'
-import { Sprite as IconSprite } from 'cozy-ui/react/Icon'
+import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout'
+import IconSprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 import Sidebar from './Sidebar'
 import Intents from './Intents'
 
-const App = () => (
+
+const App = () => 
+{
+  return (
   <HashRouter>
     <Layout>
       <Sidebar />
@@ -23,7 +25,7 @@ const App = () => (
       <IconSprite />
     </Layout>
   </HashRouter>
-)
+)}
 
 /*
   Enable Hot Module Reload using `react-hot-loader` here
@@ -31,4 +33,4 @@ const App = () => (
   No need to use it anywhere else, it sould work for all
   child components
 */
-export default hot(module)(App)
+export default App
