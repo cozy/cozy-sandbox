@@ -1,7 +1,7 @@
+/* global cozy */
+
 import 'cozy-ui/transpiled/react/stylesheet.css'
 import 'cozy-ui/dist/cozy-ui.utils.min.css'
-
-/* global cozy */
 
 import 'styles'
 
