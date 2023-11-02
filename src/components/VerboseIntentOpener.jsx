@@ -5,23 +5,14 @@ import { Consumer } from './ClientProvider'
 class _VerboseIntentOpener extends React.Component {
   constructor() {
     super()
-    this.handleChange = this.handleChange.bind(this)
-    this.state = { v2: false }
-  }
-  handleChange(ev) {
-    this.setState({ v2: ev.target.checked })
   }
 
   render() {
     const { client, ...forwardProps } = this.props
     const { action, doctype, options, create } = this.props
-    const { v2 } = this.state
     const createAction = create ? create : client.intents.create.bind(client.intents)
     return (
       <div>
-        Client V2 :{' '}
-        <input checked={v2} type="checkbox" onChange={this.handleChange} />
-        <br />
         <pre>
           Action: {action}
           {'\n'}
