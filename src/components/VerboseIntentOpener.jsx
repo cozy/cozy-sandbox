@@ -1,16 +1,11 @@
 import React from 'react'
 import IntentOpener from 'cozy-ui/transpiled/react/deprecated/IntentOpener'
-import { Consumer } from './ClientProvider'
+import { useClient } from 'cozy-client'
 
-class _VerboseIntentOpener extends React.Component {
-  constructor() {
-    super()
-  }
-
-  render() {
-    const { client, ...forwardProps } = this.props
-    const { action, doctype, options, create } = this.props
-    const createAction = create ? create : client.intents.create.bind(client.intents)
+const VerboseIntentOpener = props => {
+    const client = useClient()    
+    const { ...forwardProps } = props
+    const { action, doctype, options } = props
     return (
       <div>
         <pre>
@@ -20,18 +15,10 @@ class _VerboseIntentOpener extends React.Component {
           {'\n'}
           Options: {JSON.stringify(options, null, 2)}
         </pre>
-        <IntentOpener create={createAction} {...forwardProps}  />
+        <IntentOpener create={client.intents.create} {...forwardProps}  />
       </div>
     )
   }
-}
 
-const VerboseIntentOpener = props => {
-  return (
-    <Consumer>
-      {client => <_VerboseIntentOpener client={client} {...props} />}
-    </Consumer>
-  )
-}
 
 export default VerboseIntentOpener
