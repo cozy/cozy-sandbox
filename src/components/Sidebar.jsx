@@ -1,14 +1,16 @@
 import React from 'react'
-import Icon from 'cozy-ui/react/Icon'
-import { translate } from 'cozy-ui/react/I18n'
-import Nav, { NavItem, genNavLink } from 'cozy-ui/react/Nav'
-import UISidebar from 'cozy-ui/react/Sidebar'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import { useI18n } from 'cozy-ui/transpiled/react/providers/I18n'
+import Nav, { NavItem, genNavLink } from 'cozy-ui/transpiled/react/Nav'
+import UISidebar from 'cozy-ui/transpiled/react/Sidebar'
 import { NavLink as RNavLink } from 'react-router-dom'
 import NavIcon from '../assets/icons/icon-bullet-point.svg'
 
 const NavLink = genNavLink(RNavLink)
 
-export const Sidebar = ({ t }) => (
+const Sidebar = () => {
+  const { t } = useI18n()
+  return (
   <UISidebar>
     <Nav>
       <NavItem>
@@ -20,5 +22,6 @@ export const Sidebar = ({ t }) => (
     </Nav>
   </UISidebar>
 )
+  }
 
-export default translate()(Sidebar)
+export default Sidebar

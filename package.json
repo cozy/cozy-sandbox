@@ -15,7 +15,7 @@
     "watch:mobile": "cozy-scripts watch --mobile",
     "start": "cozy-scripts start --hot --browser",
     "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-https://$GITHUB_TOKEN@github.com/cozy/cozy-sandbox.git}",
-    "test": "cozy-scripts test --verbose --coverage",
+    "test": "jest --passWithNoTests",
     "cozyPublish": "git fetch origin ${DEPLOY_BRANCH:-build}:${DEPLOY_BRANCH:-build} && cozy-scripts publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})"
   },
   "repository": {
@@ -30,28 +30,21 @@
   },
   "homepage": "https://github.com/cozy/cozy-sandbox#readme",
   "devDependencies": {
-    "babel-core": "7.0.0-bridge.0",
-    "babel-preset-cozy-app": "1.2.1",
-    "enzyme": "3.9.0",
-    "enzyme-adapter-react-16": "1.7.0",
-    "eslint-plugin-prettier": "3.0.1",
-    "eslint-plugin-react": "7.11.1",
+    "babel-preset-cozy-app": "2.1.0",
     "git-directory-deploy": "1.5.1",
-    "prettier": "1.15.2",
-    "react-hot-loader": "4.8.0",
-    "react-test-renderer": "16.7.0",
-    "stylint": "1.5.9"
+    "stylint": "2.0.0"
   },
   "dependencies": {
-    "cozy-bar": "6.10.0",
-    "cozy-client": "6.49.0",
-    "cozy-client-js": "0.14.2",
-    "cozy-interapp": "0.4.6",
-    "cozy-scripts": "1.13.0",
-    "cozy-ui": "17.2.0",
-    "eslint-config-cozy-app": "1.1.4",
-    "react": "16.7.0",
-    "react-dom": "16.7.0",
+    "cozy-bar": "7.28.0",
+    "cozy-client": "42.2.0",
+    "cozy-flags": "^3.1.0",
+    "cozy-intent": "^2.18.0",
+    "cozy-interapp": "0.8.1",
+    "cozy-scripts": "8.1.2",
+    "cozy-ui": "95.6.0",
+    "eslint-config-cozy-app": "6.1.0 ",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "react-router-dom": "4.3.1"
   }
 }

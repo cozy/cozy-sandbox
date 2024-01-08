@@ -1,7 +1,7 @@
 import React from 'react'
 
 import VerboseIntentOpener from './VerboseIntentOpener'
-import { Button } from 'cozy-ui/react/Button'
+import Button  from 'cozy-ui/transpiled/react/Buttons'
 
 class FileIntent extends React.Component {
   constructor() {
@@ -36,7 +36,7 @@ class FileIntent extends React.Component {
           }
           onDismiss={() => alert('intent has been dismissed !')}
         >
-          <Button disabled={!this.state.fileId}>Open file</Button>
+          <Button disabled={!this.state.fileId} label={"Open File"} />
         </VerboseIntentOpener>
       </div>
     )

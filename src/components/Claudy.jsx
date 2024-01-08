@@ -1,7 +1,7 @@
 import React from 'react'
 
 import VerboseIntentOpener from './VerboseIntentOpener'
-import { Button } from 'cozy-ui/react/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 
 class ClaudyIntent extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class ClaudyIntent extends React.Component {
           }
           onDismiss={() => alert('intent has been dismissed !')}
         >
-          <Button>Open Claudy</Button>
+          <Button label={'Open Claudy'} />
         </VerboseIntentOpener>
       </div>
     )

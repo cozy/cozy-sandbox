@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button } from 'cozy-ui/react/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import VerboseIntentOpener from './VerboseIntentOpener'
 
 const Apps = () => (
@@ -16,7 +16,7 @@ const Apps = () => (
       }}
       size={'xlarge'}
     >
-      <Button>Pick folder</Button>
+      <Button label={'Pick Folder'} /> 
     </VerboseIntentOpener>
   </div>
 )
